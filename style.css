@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "minion-semiBold";
+    src:
+      url("assets/MinionPro-Semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "minion-regular";
+    src:
+      url("assets/MinionPro-Regular.woff") format("woff");
+}
+
+html {
+    font-family: "minion-regular", serif;
+}
+
+h1 {
+    font-family: "minion-semiBold", serif;
+}
