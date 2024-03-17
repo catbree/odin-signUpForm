@@ -20,9 +20,49 @@
     </div>
     <div class="rightSection">
         <div class="tagline">
-            <h2>I see you've stopped here for a break. This space is safe, and you can stay here for as long as you need. If you need us, we'll be here waiting for you.</h2>
+            <h2>Take all the time you need.</h2>
         </div>
-        <div class="signUpForm"></div>
+        <div class="signUpForm">
+            <form method="" action="POST">
+                    <legend>When you're ready, start here.
+                            <br>
+                            All fields are mandatory.</legend>
+                    <div class="formGroup">
+                        <p>
+                            <label for="firstName" aria-label="required"> First Name: </label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </p>   
+                        <p>
+                            <label for="lastName" aria-label="required"> Last Name: </label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </p>   
+                    </div>
+
+                    <div class="formGroup">
+                        <p>
+                        <label for="email" aria-label="required"> Email: </label>
+                        <input type="email" id="email" name="email" required>
+                        </p>
+                    </div>
+
+                    <div class="formGroup">
+                        <p>
+                            <label for="password" aria-label="required"> Password: </label>
+                            <input class="error" type="password" id="password" name="password" required>
+                        </p>
+                        
+                        <p>
+                            <label for="passwordConfirmation"> Confirm Password: </label>
+                            <input class="error" type="password" id="passwordConfirmation" name="passwordConfirmation">
+                        </p>
+                    </div>
+
+                    <div class="formGroup">
+                        <button type="submit">Create account</button>
+                    </div>
+            </form>
+            </form>
+        </div>
     </div>
 </body>
 </html>
