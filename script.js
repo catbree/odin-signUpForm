@@ -20,6 +20,7 @@ firstName.addEventListener("input", () => {
     if (firstName.validity.valid) {
         firstNameError.textContent = "";
         firstNameError.className = "errorMessage";
+        firstName.className="";
     } else {
         showError(firstName);
     }
@@ -29,6 +30,7 @@ lastName.addEventListener("input", () => {
     if (lastName.validity.valid) {
         lastNameError.textContent = "";
         lastNameError.className = "errorMessage";
+        lastName.className="";
     } else {
         showError(lastName);
     }
@@ -38,6 +40,7 @@ email.addEventListener("input", () => {
     if (email.validity.valid) {
         emailError.textContent = "";
         emailError.className = "errorMessage";
+        email.className="";
     } else {
         showError(email);
     }
@@ -47,6 +50,7 @@ password.addEventListener("input", () => {
     if (password.validity.valid) {
         passwordError.textContent = "";
         passwordError.className = "errorMessage";
+        password.className="";
     } else {
         showError(password);
     }
@@ -63,19 +67,22 @@ const showError = (inputField) => {
 
     if(inputField.validity.valueMissing) {
         inputFieldError.textContent = "This field is required.";
+        inputField.className="invalid";
     }
 
     if((inputField.type=="email") && (inputField.validity.typeMismatch)) {
         inputFieldError.textContent = "This needs to be an email address."
+        inputField.className="invalid";
     }
 
     if((inputField.type=="password") && (inputField.validity.tooShort)) {
         inputFieldError.textContent = `At least ${inputField.minLength} characters needed`
+        inputField.className="invalid";
     }
 }
 
 const validatePasswordSimilarity = () => {
-    if(password.value !== passwordConfirmation.value) {
+    if((password.value !== passwordConfirmation.value) && (password.value!=="") && (passwordConfirmation.value!=="")) {
         passwordConfirmationError.textContent = "Passwords don't match."
         passwordConfirmation.className="invalid";
 

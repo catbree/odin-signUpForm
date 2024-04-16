@@ -138,14 +138,11 @@ input:active {
     background-color: rgba(212, 212, 212, 10%);
 }
 
-input:invalid,
 input.invalid {
     border: 2px rgb(235, 75, 75) solid;
     background-color:rgb(235 75 75 / 20%);
 }
 
-input:invalid:hover,
-input:invalid:active,
 input.invalid:hover,
 input.invalid:active {
     background-color:rgb(235 75 75 / 30%);
