@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.tableTop {
+    display: flex;
+    gap: 24px;
+}
+
+.tableGameboard {
+    display: grid;
+    width: 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 2px solid black;
+}
+
+.gameboardCell {
+    height: 100px;
+    border: 2px solid black;
+}
+
+.gameboardCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 64px;
+}
+
+.tableLeft,
+.tableRight {
+    text-align: center;
+}
